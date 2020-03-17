@@ -14,7 +14,7 @@ import net.imglib2.type.Type;
 import net.imglib2.type.numeric.real.FloatType;
 
 /**
- * Opens a file with ImageJ and threshold it based on a pre-defined threshold value
+ * Opens a file with ImgOpener and threshold it based on a pre-defined threshold value
  * All the pixels in the input image which are less than or equal to 180 are set to 0 (black) and
  * the pixels above 180 are set to 255 (white)
  * 
