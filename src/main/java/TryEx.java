@@ -21,21 +21,21 @@ public class TryEx {
 	public < T extends RealType< T > & NativeType< T > > TryEx() throws ImgIOException
 	{
 		
-		// open with ImgOpener
-        final Img< T > img = (Img< T >) IO.openImgs( "DrosophilaWing.tif" ).get( 0 );
-        ImageJFunctions.show( img );
+	  // open with ImgOpener
+          final Img< T > img = (Img< T >) IO.openImgs( "DrosophilaWing.tif" ).get( 0 );
+          ImageJFunctions.show( img );
         
-        // Image Threshold function
-        Img< T > output = imageThreshold( img );
+          // Image Threshold function
+          Img< T > output = imageThreshold( img );
  
-        // display the copy
-        ImageJFunctions.show( output );
+          // display the copy
+          ImageJFunctions.show( output );
 		
 	}
 	
 	public < T extends RealType< T > > Img< T > imageThreshold( final Img< T > input ) throws ImgIOException
     {
-		// create a new Image with the same properties
+	// create a new Image with the same properties
         // note that the input provides the size for the new image as it implements
         // the Interval interface
         Img< T > output = input.factory().create( input );
