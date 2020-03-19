@@ -34,50 +34,50 @@ public class TryEx {
 	}
 	
 	public < T extends RealType< T > > Img< T > imageThreshold( final Img< T > input ) throws ImgIOException
-    {
-	// create a new Image with the same properties
-        // note that the input provides the size for the new image as it implements
-        // the Interval interface
-        Img< T > output = input.factory().create( input );
+        {
+	   // create a new Image with the same properties
+           // note that the input provides the size for the new image as it implements
+           // the Interval interface
+           Img< T > output = input.factory().create( input );
  
-        // create a cursor for both images
-        Cursor< T > cursorInput  = input.cursor();
-        Cursor< T > cursorOutput = output.cursor();
+           // create a cursor for both images
+           Cursor< T > cursorInput  = input.cursor();
+           Cursor< T > cursorOutput = output.cursor();
 			
-        double threshold = 180.0;
+           double threshold = 180.0;
         
-	// iterate over the input pixels
-	while ( cursorInput.hasNext())
-	{
-	    // move both cursors forward by one pixel
-	    cursorInput.fwd();
-	    cursorOutput.fwd();
+	   // iterate over the input pixels
+	   while ( cursorInput.hasNext())
+	   {
+	       // move both cursors forward by one pixel
+	       cursorInput.fwd();
+	       cursorOutput.fwd();
 			
 			
-	    final RealType<?> thisPixel = cursorInput.get();
+	       final RealType<?> thisPixel = cursorInput.get();
           
-            if (thisPixel.getRealDouble() > threshold)
-            {
-            	//set the current pixel to 255 in the input image
-            	thisPixel.setReal(255.0);
+               if (thisPixel.getRealDouble() > threshold)
+               {
+                   //set the current pixel to 255 in the input image
+            	   thisPixel.setReal(255.0);
             	
-            	// set the value of this pixel of the output image
-            	cursorOutput.get().set( cursorInput.get() );
+            	   // set the value of this pixel of the output image
+            	  cursorOutput.get().set( cursorInput.get() );
             	
-            }
-            else
-            {
-            	//set the current pixel to 0 in the input image
-            	thisPixel.setReal(0.0);
+               }
+               else
+               {
+            	   //set the current pixel to 0 in the input image
+            	   thisPixel.setReal(0.0);
             	
-            	// set the value of this pixel of the output image
-            	cursorOutput.get().set( cursorInput.get() );
-            }
+            	   // set the value of this pixel of the output image
+            	   cursorOutput.get().set( cursorInput.get() );
+               }
             
-	}
+	   }
 					
-	// return the output image
-	return output;
+	   // return the output image
+	   return output;
 }
 			
 	public static void main(String[] args) 
