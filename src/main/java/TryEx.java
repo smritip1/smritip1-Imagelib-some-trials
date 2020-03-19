@@ -16,7 +16,6 @@ import net.imglib2.type.numeric.RealType;
  * */
 public class TryEx {
 
-	//private double threshold;
 
 	public < T extends RealType< T > & NativeType< T > > TryEx() throws ImgIOException
 	{
@@ -43,7 +42,8 @@ public class TryEx {
            // create a cursor for both images
            Cursor< T > cursorInput  = input.cursor();
            Cursor< T > cursorOutput = output.cursor();
-			
+	
+	   // define the threshold	
            double threshold = 180.0;
         
 	   // iterate over the input pixels
@@ -55,7 +55,8 @@ public class TryEx {
 			
 			
 	       final RealType<?> thisPixel = cursorInput.get();
-          
+               
+	       // check if the current pixel intensity is more than the threshold
                if (thisPixel.getRealDouble() > threshold)
                {
                    //set the current pixel to 255 in the input image
