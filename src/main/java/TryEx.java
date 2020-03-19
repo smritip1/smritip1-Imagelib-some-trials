@@ -41,20 +41,20 @@ public class TryEx {
         Img< T > output = input.factory().create( input );
  
         // create a cursor for both images
-        Cursor< T > cursorInput = input.cursor();
+        Cursor< T > cursorInput  = input.cursor();
         Cursor< T > cursorOutput = output.cursor();
 			
         double threshold = 180.0;
         
-		// iterate over the input pixels
-		while ( cursorInput.hasNext())
-		{
-			// move both cursors forward by one pixel
-			cursorInput.fwd();
-			cursorOutput.fwd();
+	// iterate over the input pixels
+	while ( cursorInput.hasNext())
+	{
+	    // move both cursors forward by one pixel
+	    cursorInput.fwd();
+	    cursorOutput.fwd();
 			
 			
-			final RealType<?> thisPixel = cursorInput.get();
+	    final RealType<?> thisPixel = cursorInput.get();
           
             if (thisPixel.getRealDouble() > threshold)
             {
@@ -74,11 +74,11 @@ public class TryEx {
             	cursorOutput.get().set( cursorInput.get() );
             }
             
-		}
+	}
 					
-		// return the output image
-		return output;
-    }
+	// return the output image
+	return output;
+}
 			
 	public static void main(String[] args) 
 	{
