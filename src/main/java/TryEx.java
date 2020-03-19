@@ -59,7 +59,7 @@ public class TryEx {
 	       // check if the current pixel intensity is more than the threshold
                if (thisPixel.getRealDouble() > threshold)
                {
-                   //set the current pixel to 255 in the input image
+                   // set the current pixel to 255 in the input image
             	   thisPixel.setReal(255.0);
             	
             	   // set the value of this pixel of the output image
@@ -68,7 +68,7 @@ public class TryEx {
                }
                else
                {
-            	   //set the current pixel to 0 in the input image
+            	   // set the current pixel to 0 in the input image
             	   thisPixel.setReal(0.0);
             	
             	   // set the value of this pixel of the output image
