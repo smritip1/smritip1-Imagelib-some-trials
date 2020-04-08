@@ -29,7 +29,7 @@ public class AdaptiveThreshold
 
 	public < T extends RealType< T > & NativeType< T > > AdaptiveThreshold() throws ImgIOException
 	{
-		// open with SCIFIO as a IntType
+	// open with SCIFIO as a IntType
         Img< IntType > img = IO.openImgs( "bradley_method_01.png", new IntType() ).get( 0 );
 		
         ImageJFunctions.show( img );
