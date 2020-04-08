@@ -22,7 +22,8 @@ public class TryEx {
 	{
 		
 	  // open with ImgOpener
-          final Img< T > img = (Img< T >) IO.openImgs( "DrosophilaWing.tif" ).get( 0 );
+          //final Img< T > img = (Img< T >) IO.openImgs( "DrosophilaWing.tif" ).get( 0 );
+	  final Img< T > img = (Img< T >) IO.openImgs( "bradley_method_01.png" ).get( 0 );	
           ImageJFunctions.show( img );
         
           // Image Threshold function
@@ -45,7 +46,7 @@ public class TryEx {
            Cursor< T > cursorOutput = output.cursor();
 	
 	   // define the threshold	
-           double threshold = 180.0;
+           double threshold = 140.0;
         
 	   // iterate over the input pixels
 	   while ( cursorInput.hasNext())
