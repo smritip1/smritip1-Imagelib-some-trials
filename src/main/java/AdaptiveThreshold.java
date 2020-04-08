@@ -3,31 +3,17 @@ import ij.ImageJ;
 import io.scif.img.IO;
 import io.scif.img.ImgIOException;
 import mpicbg.util.RealSum;
-import net.imglib2.Cursor;
 import net.imglib2.img.Img;
 import net.imglib2.img.display.imagej.ImageJFunctions;
-import net.imglib2.type.Type;
-import net.imglib2.type.numeric.real.FloatType;
-
 import net.imglib2.Interval;
-import net.imglib2.RandomAccess;
-import net.imglib2.RandomAccessible;
 import net.imglib2.RandomAccessibleInterval;
-import net.imglib2.algorithm.gauss.Gauss;
 import net.imglib2.algorithm.neighborhood.Neighborhood;
 import net.imglib2.algorithm.neighborhood.RectangleShape;
-import net.imglib2.algorithm.region.hypersphere.HyperSphere;
-import net.imglib2.exception.IncompatibleTypeException;
-import net.imglib2.img.ImgFactory;
-import net.imglib2.img.array.ArrayImgFactory;
 import net.imglib2.type.NativeType;
-import net.imglib2.type.logic.BitType;
 import net.imglib2.type.numeric.RealType;
 import net.imglib2.type.numeric.integer.IntType;
 import net.imglib2.util.Intervals;
 import net.imglib2.view.Views;
-import net.imglib2.type.numeric.*;
-import net.imglib2.type.numeric.real.*;
 
 /**
  * This example applies adaptive thresholding to an image 
