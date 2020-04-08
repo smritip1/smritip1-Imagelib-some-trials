@@ -48,7 +48,7 @@ public class AdaptiveThreshold
 		
         ImageJFunctions.show( img );
 		
-        // find local minima and paint them into another image as spheres
+        //find the adaptive threshold - mean of surrounding pixels
         AdaptiveThreshold( img );
         
         // Display the final image
