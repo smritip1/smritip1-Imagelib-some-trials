@@ -42,10 +42,8 @@ public class AdaptiveThreshold
         	
      }
         
-	 
-	
-	//@SuppressWarnings("null")
-	public < T extends Comparable< T >, U extends RealType< U > > 
+    //@SuppressWarnings("null")
+    public < T extends Comparable< T >, U extends RealType< U > > 
     void AdaptiveThreshold(RandomAccessibleInterval< IntType > source)
     throws ImgIOException
     {
